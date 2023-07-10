@@ -1,0 +1,5 @@
+$namespace: 'shy' !default; // 所有的组件以shy开头，如 shy-input
+$common-separator: '-' !default; // 公共的连接符
+$element-separator: '__' !default; // 元素以__分割，如 shy-input__inner
+$modifier-separator: '--' !default; // 修饰符以--分割，如 shy-input--mini
+$state-prefix: 'is-' !default; // 状态以is-开头，如 is-disabled

@@ -7,8 +7,8 @@
     {
       "path": "./tsconfig.play.json"
     }, // 组件 play 部分
-    {
-      "path": "./tsconfig.vitest.json"
-    } // 组件测试部分
+    // {
+    //   "path": "./tsconfig.vitest.json"
+    // } // 组件测试部分
   ]
 }
