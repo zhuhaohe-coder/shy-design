@@ -1,5 +1,4 @@
 import { createApp } from 'vue';
-import './style.css';
 import App from './App.vue';
 import ShyIcon from '@shy-design/components/icon';
 import '@shy-design/theme-chalk/src/index.scss';
