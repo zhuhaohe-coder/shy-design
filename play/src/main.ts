@@ -1,9 +1,10 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import ShyIcon from '@shy-design/components/icon';
+import ShyButton from '@shy-design/components/button';
 import '@shy-design/theme-chalk/src/index.scss';
 
-const components = [ShyIcon];
+const components = [ShyIcon, ShyButton];
 // 是否已安装标识
 const INSTALLED_KEY = Symbol('INSTALLED_KEY');
 // 组件库插件
