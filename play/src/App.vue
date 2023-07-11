@@ -1,6 +1,7 @@
 <template>
   <div>
     <shy-icon :color="'skyblue'" :size="50"><EditIcon /></shy-icon>
+    <hr />
     <shy-button type="danger" disabled>Danger</shy-button>
     <shy-button>按钮</shy-button>
     <shy-button type="primary">Primary</shy-button>
@@ -8,8 +9,10 @@
     <shy-button type="info" round>Info</shy-button>
     <shy-button type="warning" circle>Warning</shy-button>
     <shy-button type="danger" disabled>Danger</shy-button>
-    <shy-button size="large" ref="buttonRef">按钮</shy-button>
-    <shy-button size="small" @click="handleClick">按钮</shy-button>
+    <shy-button size="large" ref="buttonRef">
+      <template #icon><EditIcon /></template>
+    </shy-button>
+    <shy-button size="small" @click="handleClick" :icon="EditIcon"></shy-button>
   </div>
 </template>
 

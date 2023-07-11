@@ -15,6 +15,10 @@
     :type="nativeType"
     @click="handleClick"
   >
+    <shy-icon v-if="icon || $slots.icon">
+      <component :is="icon" v-if="icon" />
+      <slot v-else name="icon"></slot>
+    </shy-icon>
     <slot></slot>
   </button>
 </template>
