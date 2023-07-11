@@ -15,6 +15,12 @@
     :type="nativeType"
     @click="handleClick"
   >
+    <template v-if="loading">
+      <slot v-if="$slots.loading" name="loading"></slot>
+      <shy-icon v-else :class="namespace.is('loading')">
+        <component :is="loadingIcon" />
+      </shy-icon>
+    </template>
     <shy-icon v-if="icon || $slots.icon">
       <component :is="icon" v-if="icon" />
       <slot v-else name="icon"></slot>

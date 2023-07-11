@@ -8,7 +8,7 @@
     <shy-button type="success" plain>Success</shy-button>
     <shy-button type="info" round>Info</shy-button>
     <shy-button type="warning" circle>Warning</shy-button>
-    <shy-button type="danger" disabled>Danger</shy-button>
+    <shy-button type="danger" disabled loading>Danger</shy-button>
     <shy-button size="large" ref="buttonRef">
       <template #icon><EditIcon /></template>
     </shy-button>

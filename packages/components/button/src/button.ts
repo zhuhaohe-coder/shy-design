@@ -1,4 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue';
+import { Loading } from '@element-plus/icons-vue';
 import type Button from './button.vue';
 
 // 点击事件
@@ -32,6 +33,11 @@ export const buttonProps = {
   round: Boolean,
   plain: Boolean,
   circle: Boolean,
+  loading: Boolean,
+  loadingIcon: {
+    type: [Object, String] as PropType<string | Record<string, unknown>>,
+    default: () => Loading,
+  },
 } as const;
 // Props 类型
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
