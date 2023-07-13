@@ -1,5 +1,5 @@
 <template>
-  <i :class="bem.b()" :style="style">
+  <i :class="namespace.b()" :style="style">
     <slot></slot>
   </i>
 </template>
@@ -12,7 +12,7 @@ import type { CSSProperties } from 'vue';
 import { computed } from 'vue';
 
 defineOptions({ name: 'ShyIcon' });
-const bem = useNamespace('icon');
+const namespace = useNamespace('icon');
 const props = defineProps(iconProps);
 
 const style = computed<CSSProperties>(() => {
