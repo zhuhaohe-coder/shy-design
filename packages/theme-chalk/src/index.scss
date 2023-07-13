@@ -1,1 +1,17 @@
 @use './icon.scss';
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+html.light {
+  color-scheme: light;
+  --text-color: #000;
+  --bg-color: #fff;
+}
+html.dark {
+  color-scheme: dark;
+  --text-color: #fff;
+  --bg-color: #000;
+}

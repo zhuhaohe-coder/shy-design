@@ -15,8 +15,8 @@
     <shy-button size="small" @click="handleClick" :icon="EditIcon"></shy-button>
     <hr />
     <shy-button-group type="success" size="large">
-      <shy-button>按钮1</shy-button>
-      <shy-button>按钮2</shy-button>
+      <shy-button @click="changeTheme('dark')">黑夜模式</shy-button>
+      <shy-button @click="changeTheme('light')">白天模式</shy-button>
     </shy-button-group>
   </div>
 </template>
@@ -34,6 +34,11 @@ nextTick(() => {
 
 const handleClick = (e: MouseEvent) => {
   console.log(e.target);
+};
+
+const changeTheme = (type: string) => {
+  const html = document.querySelector('html') as HTMLElement;
+  html.setAttribute('class', type);
 };
 </script>
 
