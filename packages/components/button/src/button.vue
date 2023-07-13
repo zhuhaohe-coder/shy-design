@@ -3,8 +3,8 @@
     ref="button"
     :class="[
       namespace.b(),
-      namespace.m(type),
-      namespace.m(size),
+      namespace.m(_type),
+      namespace.m(_size),
       namespace.is('disabled', disabled),
       namespace.is('plain', plain),
       namespace.is('circle', circle),
@@ -30,13 +30,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, inject, computed } from 'vue';
 import { useNamespace } from '@shy-design/hooks';
 import { buttonEmits, buttonProps } from './button';
+import { buttonGroupContextKey } from '@shy-design/tokens';
 
 defineOptions({ name: 'ShyButton' });
 
-defineProps(buttonProps);
+const props = defineProps(buttonProps);
 
 const emit = defineEmits(buttonEmits);
 
@@ -47,6 +48,11 @@ const button = ref<HTMLButtonElement>();
 const handleClick = (e: MouseEvent) => {
   emit('click', e);
 };
+// 使用 inject 取出祖先组件提供的依赖
+const buttonGroupContext = inject(buttonGroupContextKey, null);
+// 使用 computed 进行缓存计算
+const _size = computed(() => props.size || buttonGroupContext?.size);
+const _type = computed(() => props.type || buttonGroupContext?.type);
 
 defineExpose({
   button,

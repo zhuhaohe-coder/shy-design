@@ -13,6 +13,11 @@
       <template #icon><EditIcon /></template>
     </shy-button>
     <shy-button size="small" @click="handleClick" :icon="EditIcon"></shy-button>
+    <hr />
+    <shy-button-group type="success" size="large">
+      <shy-button>按钮1</shy-button>
+      <shy-button>按钮2</shy-button>
+    </shy-button-group>
   </div>
 </template>
 
